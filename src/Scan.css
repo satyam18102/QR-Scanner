@@ -1,0 +1,22 @@
+#reader{
+    align-items: center !important;
+    align-self: center !important;
+    text-align: center !important;
+}
+.App{
+    text-align: center;
+    margin-left: 5rem;
+
+}
+.center{
+    display: block !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+input{
+    background-color: white;
+    color: #000;
+    line-height: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
