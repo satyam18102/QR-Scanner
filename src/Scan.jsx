@@ -26,7 +26,7 @@ export default function Scan(){
         <div className="App">
         {scanResult
         ?<div className='center'>
-            <h4><a href={'https://'+scanResult}>{scanResult}</a></h4>
+            <h4 className='center'><a href={'https://'+scanResult}>{scanResult}</a></h4>
         </div>
         :<div>
         <h1>Scanner</h1>
