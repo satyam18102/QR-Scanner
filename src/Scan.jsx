@@ -6,8 +6,8 @@ export default function Scan(){
     useEffect(()=>{
         const scanner=new Html5QrcodeScanner('reader',{
             qrbox:{
-                width:250,
-                height:500,
+                width:800,
+                height:800,
     
             },
             fps:5,
@@ -16,21 +16,22 @@ export default function Scan(){
         function success(result){
             scanner.clear();
             setScanResult(result);
-            // console.log(result);
         }
         function error(err){
-            // console.log(err)
+            // console.log(err);
         }
     },[])
     return(
         <>
         <div className="App">
-        <h1>Scanner</h1>
         {scanResult
         ?<div className='center'>
-            <h1>{scanResult}</h1>
+            <h4><a href={'https://'+scanResult}>{scanResult}</a></h4>
         </div>
-        :<div id='reader'></div>
+        :<div>
+        <h1>Scanner</h1>
+        <div id='reader'></div>
+        </div>
     }
         </div>
         </>
