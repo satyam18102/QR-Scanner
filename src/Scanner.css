@@ -1,0 +1,12 @@
+div{
+    display: block;
+    text-align: center !important;
+}
+form{
+    display: block;
+}
+Button{
+    display: block !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
