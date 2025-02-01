@@ -17,7 +17,6 @@ export default function Scanner(){
     <form onSubmit={handleSubmit}>
     <TextField id="outlined-basic" label="Enter Text" variant="outlined" onChange={(e)=>setText(e.target.value)} value={text} />
     <Button variant="contained" type="submit">Generate</Button>
-    {/* <div className="dis"> */}
         <QRCode
     size={256}
     style={{ height: "auto",backgroundColor:"black", maxWidth: "30%", width: "30%" }}
@@ -25,7 +24,6 @@ export default function Scanner(){
     viewBox={`0 0 256 256`}
     className="qr"
     />
-    {/* </div> */}
     </form>
   </div>
     
