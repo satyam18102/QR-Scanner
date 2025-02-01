@@ -1,12 +1,15 @@
-div{
+/* form{
     display: block;
-    text-align: center !important;
-}
-form{
-    display: block;
-}
+} */
 Button{
     display: block !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
+}
+.dis{
+    margin-top: 2rem !important;
+    margin-left: 40rem !important;
+    height: 300px;
+    width: 800px;
+    text-align: center !important;
 }

@@ -5,24 +5,28 @@ import TextField from '@mui/material/TextField';
 import './Scanner.css'
 
 export default function Scanner(){
-    let [text,setText]=useState(null);
-  let [value,setValue]=useState(null);
-  let handleSubmit= async()=>{
+    let [text,setText]=useState('');
+  let [value,setValue]=useState('');
+  let handleSubmit= async(e)=>{
+    e.preventDefault();
     setValue(text);
   };
   return(
     
-    <div>
+    <div className="dis">
     <form onSubmit={handleSubmit}>
-    <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+    <TextField id="outlined-basic" label="Enter Text" variant="outlined" onChange={(e)=>setText(e.target.value)} value={text} />
     <Button variant="contained" type="submit">Generate</Button>
-    </form>
-    <QRCode
+    {/* <div className="dis"> */}
+        <QRCode
     size={256}
-    style={{ height: "auto",backgroundColor:"black", maxWidth: "20%", width: "20%" }}
-    value="Hello"
+    style={{ height: "auto",backgroundColor:"black", maxWidth: "30%", width: "30%" }}
+    value={value}
     viewBox={`0 0 256 256`}
-  />
+    className="qr"
+    />
+    {/* </div> */}
+    </form>
   </div>
     
   );
